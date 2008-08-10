@@ -18,7 +18,7 @@ function ajax_post(url, parameters) {//küldendõ tömb feldolgozás
       }
    }
    if (!req) return false;
-
+   
    req.onreadystatechange = filter;
    req.open("POST", url, true);
    req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -57,7 +57,7 @@ function i(e)
 {
   if (e.keyCode == 13 || e.which == 13)
   {
-    var ei = document.getElementById(input_elem)
+    var ei = document.getElementById(input_elem);
     var data = "i=" + escape(encodeURI(ei.value));
     if(ajax_post(post_url, data)) ei.value = "";
     else
@@ -72,6 +72,7 @@ var ctrl = false;
 function t0(e)
 {
   if (e.keyCode == 17 || e.which == 17) ctrl = true;
+  if (ctrl == false) f();
 }
 
 function t1(e)
@@ -83,6 +84,27 @@ function t1(e)
 function f()
 {
   document.getElementById(input_elem).focus();
+}
+
+//aktív panel funkciók
+function p0(d)
+{
+  var data = "i=" + escape(encodeURI(d));
+  if(!ajax_post(post_url, data))
+  {
+    var et = document.getElementById(textfield_elem);
+    et.innerHTML += "Cannot create XMLHTTP instance.<br/>";
+  }
+}
+
+function p1(d)
+{
+  document.getElementById(input_elem).value = d;
+}
+
+function p2(d)
+{
+  document.getElementById(input_elem).value += d;
 }
 
 //event befogás

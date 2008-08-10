@@ -6,7 +6,7 @@ www.onethreestudio.com
 2008.08.08.
 - - - - - - - - - - - - - - - - - - - - - */
 
-/* global*/
+/* global */
 html, body {
   background-image: url("images/spacer.png");
   background-repeat: repeat;
@@ -54,7 +54,6 @@ a:hover {
   padding: 9px 0 0 0;
   text-align: center;
   width: 700px;
-  text-align: center;
   background-image: url("images/border.png");
   background-repeat: repeat-x;
   background-position: top center;
@@ -67,8 +66,6 @@ a:hover {
   background-repeat: repeat-x;
   background-position: top left;
   color: #a7a7a7;
-  font-family: Arial, Verdana, Serif;
-  font-size: 12px;
   text-align: center;
   margin: 1px auto 0 auto;
   padding: 40px 100px 12px 100px;
@@ -108,6 +105,7 @@ a:hover {
   text-align: left;
   font-weight: bold;
   font-family: system, Tahoma, serif;
+  line-height: 14px;
   border: none;
   margin: 0 auto;
   padding: 5px 5px 0 5px;
